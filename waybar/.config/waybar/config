@@ -1,0 +1,46 @@
+{
+    "layer": "top",
+    "height": 30,
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "pulseaudio", "battery", "cpu", "memory", "temperature", "custom/powermenu"],
+
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M:%S}",
+        "interval": 1
+    },
+
+    "network": {
+        "format_up": "{ifname} {ipaddr}",
+        "format_down": "No Network",
+        "interval": 10
+    },
+
+    "battery": {
+        "format": "{capacity}% {time} remaining",
+        "interval": 60,
+        "ac": "AC"
+    },
+
+    "cpu": {
+        "format": "CPU: {usage}%"
+    },
+
+    "memory": {
+        "format": "RAM: {used}/{total} MB"
+    },
+
+    "temperature": {
+        "format": "Temp: {temperature}°C",
+        "interval": 30
+    },
+
+    "pulseaudio": {
+        "format": "{volume}%"
+    },
+
+    "custom/powermenu": {
+        "exec": "~/.config/waybar/scripts/powermenu.sh",
+        "interval": 0
+    }
+}
