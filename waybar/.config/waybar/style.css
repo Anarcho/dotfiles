@@ -1,35 +1,46 @@
-/* Global styles for fonts and font size */
+:root {
+    --button: #1a1b26;
+    --button-foreground: #a9b1d6;
+    --button-bottom: #414868;
+    /* ... define the rest of the variables ... */
+    --button-hover: #2a2b36;
+    --button-bottom-hover: #51546b;
+    --button-active: #2a2b36;
+    --button-bottom-active: #51546b;
+    --background2: #1a1b26;
+    --background2-bottom: #414868;
+    --foreground: #a9b1d6;
+    --accent: #61afef;
+}
+
 * {
     font-family: JetBrainsMono Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
 }
 
-/* Waybar main window */
 window#waybar {
-    background-color: ${background}; /* Placeholder to be replaced by the script */
-    border-bottom: 8px solid ${dark_gray}; /* Placeholder */
-    color: ${foreground}; /* Placeholder */
+    background-color: var(--background2);
+    border-bottom: 8px solid var(--background2-bottom);
+    color: var(--foreground);
     transition-property: background-color;
-    transition-duration: 0.5s;
+    transition-duration: .5s;
 }
 
-/* Hidden Waybar state */
 window#waybar.hidden {
     opacity: 0.2;
 }
 
-/* Workspaces section */
 #workspaces {
     margin: 0 4px;
 }
 
 #workspaces button {
-    all: unset; /* Caution: may reset more styles than intended */
-    background-color: ${dark_gray}; /* Placeholder */
-    color: ${foreground}; /* Placeholder */
+    all: unset;
+    background-color: var(--button);
+    color: var(--button-foreground);
     border: none;
-    border-bottom: 8px solid ${gray}; /* Placeholder */
+    border-bottom: 8px solid var(--button-bottom);
     border-radius: 5px;
     margin-left: 4px;
     margin-bottom: 2px;
@@ -41,33 +52,30 @@ window#waybar.hidden {
     transition: transform 0.1s ease-in-out;
 }
 
-/* Hover state for workspace buttons */
 #workspaces button:hover {
-    background-color: ${selection_bg}; /* Placeholder */
-    border-bottom: 8px solid ${blue}; /* Placeholder */
+    background-color: var(--button-hover);
+    border-bottom: 8px solid var(--button-bottom-hover);
 }
 
-/* Active workspace button */
 #workspaces button.active {
-    background-color: ${blue}; /* Placeholder */
-    border-bottom: 8px solid ${cyan}; /* Placeholder */
+    background-color: var(--button-active);
+    border-bottom: 8px solid var(--button-bottom-active);
 }
 
-/* Adjusting margins for workspaces when it's the leftmost module */
+/* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
 
-/* Adjusting margins for workspaces when it's the rightmost module */
+/* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
 
-/* Tooltip styles */
 tooltip {
-    background-color: ${background}; /* Placeholder */
+    background-color: var(--background2);
     border: none;
-    border-bottom: 8px solid ${dark_gray}; /* Placeholder */
+    border-bottom: 8px solid var(--background2-bottom);
     border-radius: 5px;
 }
 
@@ -79,9 +87,8 @@ tooltip decoration:backdrop {
     box-shadow: none;
 }
 
-/* Tooltip label styling */
 tooltip label {
-    color: ${foreground}; /* Placeholder */
+    color: var(--foreground);
     font-family: JetBrainsMono Nerd Font, monospace;
     font-size: 16px;
     padding: 0 5px 5px;
