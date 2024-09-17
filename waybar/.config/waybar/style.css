@@ -1,31 +1,35 @@
+/* Global styles for fonts and font size */
 * {
     font-family: JetBrainsMono Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
 }
 
+/* Waybar main window */
 window#waybar {
-    background-color: ${background};
-    border-bottom: 8px solid ${dark_gray};
-    color: ${foreground};
+    background-color: ${background}; /* Placeholder to be replaced by the script */
+    border-bottom: 8px solid ${dark_gray}; /* Placeholder */
+    color: ${foreground}; /* Placeholder */
     transition-property: background-color;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
 }
 
+/* Hidden Waybar state */
 window#waybar.hidden {
     opacity: 0.2;
 }
 
+/* Workspaces section */
 #workspaces {
     margin: 0 4px;
 }
 
 #workspaces button {
-    all: unset;
-    background-color: ${dark_gray};
-    color: ${foreground};
+    all: unset; /* Caution: may reset more styles than intended */
+    background-color: ${dark_gray}; /* Placeholder */
+    color: ${foreground}; /* Placeholder */
     border: none;
-    border-bottom: 8px solid ${gray};
+    border-bottom: 8px solid ${gray}; /* Placeholder */
     border-radius: 5px;
     margin-left: 4px;
     margin-bottom: 2px;
@@ -37,44 +41,48 @@ window#waybar.hidden {
     transition: transform 0.1s ease-in-out;
 }
 
+/* Hover state for workspace buttons */
 #workspaces button:hover {
-    background-color: ${selection_bg};
-    border-bottom: 8px solid ${blue};
+    background-color: ${selection_bg}; /* Placeholder */
+    border-bottom: 8px solid ${blue}; /* Placeholder */
 }
 
+/* Active workspace button */
 #workspaces button.active {
-    background-color: ${blue};
-    border-bottom: 8px solid ${cyan};
+    background-color: ${blue}; /* Placeholder */
+    border-bottom: 8px solid ${cyan}; /* Placeholder */
 }
 
-/* If workspaces is the leftmost module, omit left margin */
+/* Adjusting margins for workspaces when it's the leftmost module */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
+/* Adjusting margins for workspaces when it's the rightmost module */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
 }
 
+/* Tooltip styles */
 tooltip {
-  background-color: ${background};
-  border: none;
-  border-bottom: 8px solid ${dark_gray};
-  border-radius: 5px;
+    background-color: ${background}; /* Placeholder */
+    border: none;
+    border-bottom: 8px solid ${dark_gray}; /* Placeholder */
+    border-radius: 5px;
 }
 
 tooltip decoration {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 tooltip decoration:backdrop {
-  box-shadow: none;
+    box-shadow: none;
 }
 
+/* Tooltip label styling */
 tooltip label {
-  color: ${foreground};
-  font-family: JetBrainsMono Nerd Font, monospace;
-  font-size: 16px;
-  padding: 0 5px 5px;
+    color: ${foreground}; /* Placeholder */
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-size: 16px;
+    padding: 0 5px 5px;
 }
