@@ -1,0 +1,52 @@
+# Tokyo Night color scheme
+
+# Base colors
+background: #1a1b26
+foreground: #a9b1d6
+selection_bg: #33467C
+selection_fg: #c0caf5
+
+# Normal colors
+black: #32344a
+red: #f7768e
+green: #9ece6a
+yellow: #e0af68
+blue: #7aa2f7
+magenta: #ad8ee6
+cyan: #449dab
+white: #787c99
+
+# Bright colors
+bright_black: #444b6a
+bright_red: #ff7a93
+bright_green: #b9f27c
+bright_yellow: #ff9e64
+bright_blue: #7da6ff
+bright_magenta: #bb9af7
+bright_cyan: #0db9d7
+bright_white: #acb0d0
+
+# Extra colors
+orange: #ff9e64
+purple: #9d7cd8
+gray: #565f89
+dark_gray: #414868
+light_gray: #cfc9c2
+comment: #565f89
+gutter_fg: #3b4261
+non_text: #3b4261
+
+# Git colors
+git_add: #449dab
+git_change: #6183bb
+git_delete: #914c54
+
+# Diagnostic colors
+error: #db4b4b
+warning: #e0af68
+info: #0db9d7
+hint: #1abc9c
+
+# UI colors
+line_number: #3b4261
+line_number_active: #737aa2

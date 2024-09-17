@@ -1,32 +1,80 @@
 * {
-    font-family: "Fira Code", monospace;
-    font-size: 12px;
-    color: #ECEFF4;
-    background: #2E3440;
+    font-family: JetBrainsMono Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-#clock, #network, #battery, #cpu, #memory, #temperature, #pulseaudio {
-    padding: 0 10px;
+window#waybar {
+    background-color: ${background};
+    border-bottom: 8px solid ${dark_gray};
+    color: ${foreground};
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
-#custom-powermenu {
-    background: #4C566A;
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: #ECEFF4;
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    margin: 0 4px;
 }
 
 #workspaces button {
-    padding: 0 10px;
-    background: #3B4252;
+    all: unset;
+    background-color: ${dark_gray};
+    color: ${foreground};
+    border: none;
+    border-bottom: 8px solid ${gray};
+    border-radius: 5px;
+    margin-left: 4px;
+    margin-bottom: 2px;
+    font-family: JetBrainsMono Nerd Font, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: transform 0.1s ease-in-out;
 }
 
-#workspaces button.focused {
-    background: #81A1C1;
-    color: #2E3440;
+#workspaces button:hover {
+    background-color: ${selection_bg};
+    border-bottom: 8px solid ${blue};
 }
 
-#custom-powermenu:hover {
-    background-color: #81A1C1;
-    color: #2E3440;
+#workspaces button.active {
+    background-color: ${blue};
+    border-bottom: 8px solid ${cyan};
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+tooltip {
+  background-color: ${background};
+  border: none;
+  border-bottom: 8px solid ${dark_gray};
+  border-radius: 5px;
+}
+
+tooltip decoration {
+  box-shadow: none;
+}
+
+tooltip decoration:backdrop {
+  box-shadow: none;
+}
+
+tooltip label {
+  color: ${foreground};
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-size: 16px;
+  padding: 0 5px 5px;
 }
